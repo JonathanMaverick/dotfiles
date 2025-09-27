@@ -1,0 +1,107 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/logo.txt",
+    "type": "auto",
+    "color": {
+      "1": "magenta",
+      "2": "cyan"
+    }
+  },
+  "display": {
+    "separator": ":",
+    "color": "cyan"
+  },
+  "modules": [
+    {
+      "type": "title",
+      "color": {
+        "user": "magenta",
+        "at": "white", 
+        "host": "cyan"
+      }
+    },
+    {
+      "type": "custom",
+      "format": "┌───────────────── 🚀 SPACE STATION TELEMETRY 🛰️ ──────────────────┐"
+    },
+    {
+      "type": "os",
+      "key": " 🌍 System",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "host",
+      "key": " 🛸 Vessel",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "kernel",
+      "key": " ⚡ Engine",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "uptime",
+      "key": " 🕐 Mission Time",
+      "keyColor": "green"
+    },
+    {
+      "type": "packages",
+      "key": " 📦 Cargo Pods",
+      "keyColor": "blue"
+    },
+    {
+      "type": "shell",
+      "key": " 💻 Command Hub",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "de",
+      "key": " 🖥️ Interface",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "wm",
+      "key": " 🪟 Viewport",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "terminal",
+      "key": " 📟 Console",
+      "keyColor": "green"
+    },
+    {
+      "type": "cpu",
+      "key": " 🧠 Processor",
+      "keyColor": "red"
+    },
+    {
+      "type": "gpu",
+      "key": " 🎮 Graphics Bay",
+      "keyColor": "magenta"
+    },
+    {
+      "type": "memory",
+      "key": " 💾 Data Core",
+      "keyColor": "blue"
+    },
+    {
+      "type": "disk",
+      "key": " 💿 Storage Bay",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "battery",
+      "key": " 🔋 Power Cell",
+      "keyColor": "yellow"
+    },
+    {
+      "type": "custom",
+      "format": "└──────────────────── ✨ END TRANSMISSION ⭐ ──────────────────────┘"
+    },
+    {
+      "type": "colors",
+      "paddingLeft": 2
+    }
+  ]
+}
