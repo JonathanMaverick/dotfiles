@@ -30,6 +30,9 @@ if status is-interactive
     abbr c clear
     abbr v nvim
     abbr f fastfetch
+    abbr z zoxide
+
+    zoxide init fish | source
 
     # Custom colours
     cat ~/.local/state/caelestia/sequences.txt 2>/dev/null
