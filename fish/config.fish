@@ -37,6 +37,8 @@ if status is-interactive
     # Custom colours
     cat ~/.local/state/caelestia/sequences.txt 2>/dev/null
 
+    set -x GOPATH /home/scrail/Work/bin/go
+
     # For jumping between prompts in foot terminal
     function mark_prompt_start --on-event fish_prompt
         echo -en "\e]133;A\e\\"
