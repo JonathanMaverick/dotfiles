@@ -1,0 +1,12 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 13
+theme = Dracula
+background-opacity = 0.9
+cursor-style = block
+background-opacity = 0.8
+background-blur = 10
+
+background-image = ~/Pictures/bg.jpg
+background-image-opacity = 0.2
+background-image-position = center
+background-image-fit = cover
