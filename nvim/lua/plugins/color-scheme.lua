@@ -1,14 +1,32 @@
 return {
   {
-    "navarasu/onedark.nvim",
+    "ellisonleao/gruvbox.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("onedark").setup({
-        style = "dark", -- "dark", "darker", "cool", etc.
-        transparent = true, -- enable transparency
+      require("gruvbox").setup({
+        terminal_colors = true,
+        undercurl = true,
+        underline = true,
+        bold = true,
+        italic = {
+          strings = true,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        strikethrough = true,
+        invert_selection = false,
+        invert_signs = false,
+        invert_tabline = false,
+        invert_intend_guides = false,
+        inverse = true, -- invert background for search, diffs, etc.
+        contrast = "soft", -- "hard", "soft", or leave empty
+        palette_overrides = {},
+        overrides = {},
+        transparent_mode = true,
       })
-      require("onedark").load()
+      vim.cmd("colorscheme gruvbox")
 
       vim.cmd([[
         hi Normal guibg=NONE ctermbg=NONE
