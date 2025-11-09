@@ -129,3 +129,17 @@ eval "$(zoxide init zsh)"
 
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
+
+#Pywal
+wal-swww() {
+    wal -n -i "$@"
+    swww img "$(< "${HOME}/.cache/wal/wal")" --transition-type any --transition-fps 60 --transition-duration 2
+    cp ~/.cache/wal/colors-mako ~/.config/mako/config
+    makoctl reload
+}
+
+(cat ~/.cache/wal/sequences &)
+
+if [ -f ~/.cache/wal/colors-tty.sh ]; then
+    source ~/.cache/wal/colors-tty.sh
+fi
