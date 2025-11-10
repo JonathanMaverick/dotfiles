@@ -213,3 +213,37 @@ tooltip {
 tooltip label {
   color: @foreground;
 }
+
+#custom-song {
+  color: @color5;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 16px;
+  margin: 0 6px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  min-width: 80px;
+  transition: all 0.2s ease-in-out;
+}
+
+#custom-song:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#custom-song.playing {
+  color: @color2;
+  animation: song-pulse 2s ease-in-out infinite alternate;
+}
+
+#custom-song.paused {
+  color: @foreground;
+  opacity: 0.7;
+}
+
+@keyframes song-pulse {
+  to {
+    box-shadow: 0 0 20px @color2;
+  }
+}

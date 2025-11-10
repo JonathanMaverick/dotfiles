@@ -3,17 +3,27 @@
   "position": "top",
   "margin": "8 12 0 12",
   "height": 40,
-  
+
   "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["network", "bluetooth", "pulseaudio", "backlight", "battery", "custom/power", "tray"],
-  
+  "modules-right": ["custom/song", "network", "bluetooth", "pulseaudio", "backlight", "battery", "custom/power", "tray"],
+
+"custom/song": {
+  "format": "󰎈 {}",
+  "exec": "bash -c 'playerctl metadata --format \"{{ title }} - {{ artist }}\" 2>/dev/null || echo No music'",
+  "interval": 2,
+  "on-click": "playerctl play-pause",
+  "on-scroll-up": "playerctl next",
+  "on-scroll-down": "playerctl previous",
+  "tooltip": false
+},
+
   "custom/launcher": {
     "format": "󰣇",
     "tooltip": false,
     "on-click": "wofi"
   },
-  
+
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
@@ -34,7 +44,7 @@
       "*": 4
     }
   },
-  
+
   "hyprland/window": {
     "max-length": 60,
     "separate-outputs": true,
@@ -42,7 +52,7 @@
       "": "Desktop"
     }
   },
-  
+
   "clock": {
     "interval": 1,
     "format": " {:%H:%M:%S}",
@@ -62,7 +72,7 @@
       }
     }
   },
-  
+
   "battery": {
     "interval": 10,
     "states": {
@@ -76,7 +86,7 @@
     "format-icons": ["󱃍", "󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
     "tooltip-format": "{timeTo}\n{power}W"
   },
-  
+
   "pulseaudio": {
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 {volume}%",
@@ -94,7 +104,7 @@
     "scroll-step": 5,
     "tooltip-format": "{desc}"
   },
-  
+
   "backlight": {
     "device": "intel_backlight",
     "format": "{icon} {percent}%",
@@ -102,7 +112,7 @@
     "on-scroll-up": "brightnessctl set 5%+",
     "on-scroll-down": "brightnessctl set 5%-"
   },
-  
+
   "network": {
     "format-wifi": "󰖨 {essid}",
     "format-ethernet": "󰈀 Connected",
@@ -111,7 +121,7 @@
     "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: {ipaddr}/{cidr}\n󰞒 {bandwidthDownBytes}  󰞕 {bandwidthUpBytes}",
     "on-click": "nm-connection-editor"
   },
-  
+
   "bluetooth": {
     "format": "󰂯",
     "format-disabled": "󰂲",
@@ -121,13 +131,13 @@
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "blueman-manager"
   },
-  
+
   "custom/power": {
     "format": "⏻",
     "tooltip": false,
     "on-click": "exit"
   },
-  
+
   "tray": {
     "icon-size": 18,
     "spacing": 10
