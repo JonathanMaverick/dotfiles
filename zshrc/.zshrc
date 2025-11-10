@@ -114,6 +114,7 @@ alias zshconfig="source ~/.zshrc"
 alias c='clear'
 alias e='exit'
 alias fd='fdfind'
+alias lg='lazygit'
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
