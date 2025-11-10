@@ -114,6 +114,7 @@ alias zshconfig="source ~/.zshrc"
 alias c='clear'
 alias e='exit'
 alias fd='fdfind'
+alias lg='lazygit'
 
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -130,5 +131,16 @@ eval "$(zoxide init zsh)"
 export DOCKER_BUILDKIT=1
 export COMPOSE_DOCKER_CLI_BUILD=1
 
-# opencode
-export PATH=/Users/jonathanmaverick/.opencode/bin:$PATH
+#Pywal
+wal-swww() {
+    wal -n -i "$@"
+    swww img "$(< "${HOME}/.cache/wal/wal")" --transition-type any --transition-fps 60 --transition-duration 2
+    cp ~/.cache/wal/colors-mako ~/.config/mako/config
+    makoctl reload
+}
+
+(cat ~/.cache/wal/sequences &)
+
+if [ -f ~/.cache/wal/colors-tty.sh ]; then
+    source ~/.cache/wal/colors-tty.sh
+fi

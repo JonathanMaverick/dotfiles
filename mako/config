@@ -1,0 +1,17 @@
+font=JetBrains Mono 9
+width=250
+height=80
+margin=10
+padding=10
+border-size=2
+border-radius=6
+anchor=top-right
+default-timeout=3000
+ignore-timeout=0
+max-visible=5
+layer=overlay
+icon-path=/usr/share/icons/Papirus-Dark
+background-color=#0f1e23
+text-color=#c3c6c8
+border-color=#7B7D79
+progress-color=over #6D8968

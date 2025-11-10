@@ -1,0 +1,17 @@
+mode=drun
+style=/home/scrail/.config/wofi/style.css
+width=600
+height=400
+location=center
+allow_images=true
+image_size=32
+show=drun
+prompt=Search
+insensitive=true
+hide_scroll=true
+no_actions=true
+halign=fill
+orientation=vertical
+content_halign=fill
+matching=fuzzy
+term=foot

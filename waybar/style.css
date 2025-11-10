@@ -1,0 +1,43 @@
+@import url("/home/scrail/.cache/wal/colors-waybar.css");
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(15, 30, 35, 0.7);
+}
+
+#workspaces,
+#window,
+#clock,
+#battery,
+#network,
+#pulseaudio {
+  background: transparent;
+  color: @foreground;
+  padding: 0 12px;
+  margin: 5px;
+}
+
+#workspaces button {
+  padding: 0 8px;
+  color: @foreground;
+  background: transparent;
+}
+
+#workspaces button.active {
+  color: @color1;
+}
+
+#battery.warning {
+  color: #ffaa00;
+}
+
+#battery.critical {
+  color: #ff4444;
+}
