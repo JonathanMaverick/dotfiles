@@ -1,0 +1,215 @@
+@import url("/home/scrail/.cache/wal/colors-waybar.css");
+
+* {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: rgba(15, 30, 35, 0.85);
+  padding: 8px 16px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+#workspaces,
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#backlight,
+#bluetooth,
+#tray,
+#custom-launcher,
+#custom-power {
+  background: rgba(255, 255, 255, 0.05);
+  color: @foreground;
+  padding: 6px 16px;
+  margin: 0 6px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#window {
+  background: transparent;
+  color: @foreground;
+  padding: 6px 16px;
+  margin: 0 6px;
+}
+
+#workspaces {
+  padding: 4px 8px;
+}
+
+#workspaces button {
+  padding: 4px 12px;
+  margin: 0 2px;
+  color: @foreground;
+  background: transparent;
+  border-radius: 8px;
+}
+
+#workspaces:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  color: @color1;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid @color1;
+  box-shadow: 0 0 20px @color1;
+}
+
+#workspaces button.urgent {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.2);
+  animation: urgent-blink 1s ease infinite alternate;
+}
+
+@keyframes urgent-blink {
+  to { 
+    opacity: 0.6; 
+  }
+}
+
+#window:hover {
+  background: transparent;
+}
+
+#clock {
+  color: @color5;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  font-weight: 700;
+  padding: 6px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#clock:hover {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.08) 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#battery {
+  color: @color2;
+}
+
+#battery.warning {
+  color: #ffaa00;
+  background: rgba(255, 170, 0, 0.15);
+  border-color: rgba(255, 170, 0, 0.3);
+}
+
+#battery.critical {
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.15);
+  border-color: rgba(255, 68, 68, 0.3);
+  animation: critical-pulse 2s ease infinite alternate;
+}
+
+@keyframes critical-pulse {
+  to {
+    box-shadow: 0 0 25px rgba(255, 68, 68, 0.8);
+  }
+}
+
+#battery.charging {
+  color: @color2;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 100%);
+}
+
+#network {
+  color: @color3;
+}
+
+#network.disconnected {
+  color: #ff4444;
+  opacity: 0.6;
+}
+
+#pulseaudio {
+  color: @color6;
+}
+
+#pulseaudio.muted {
+  color: @foreground;
+  opacity: 0.5;
+}
+
+#backlight {
+  color: @color5;
+}
+
+#bluetooth {
+  color: @color4;
+}
+
+#bluetooth.disabled {
+  opacity: 0.5;
+}
+
+#custom-launcher {
+  color: @color1;
+  font-size: 16px;
+  padding: 6px 14px;
+}
+
+#custom-power {
+  color: #ff4444;
+  font-size: 16px;
+  padding: 6px 14px;
+}
+
+#workspaces:hover,
+#battery:hover,
+#network:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#bluetooth:hover,
+#custom-launcher:hover,
+#custom-power:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#tray {
+  padding: 4px 12px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background: rgba(255, 68, 68, 0.2);
+  border-radius: 8px;
+}
+
+tooltip {
+  background: rgba(15, 30, 35, 0.95);
+  color: @foreground;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+tooltip label {
+  color: @foreground;
+}

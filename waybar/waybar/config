@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin": "8 12 0 12",
+  "height": 40,
+  
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["network", "bluetooth", "pulseaudio", "backlight", "battery", "custom/power", "tray"],
+  
+  "custom/launcher": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click": "wofi"
+  },
+  
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "󰲠",
+      "2": "󰲢",
+      "3": "󰲤",
+      "4": "󰲦",
+      "5": "󰲨",
+      "6": "󰲪",
+      "7": "󰲬",
+      "8": "󰲮",
+      "9": "󰲰",
+      "active": "󰮯",
+      "default": "󰊠"
+    },
+    "persistent-workspaces": {
+      "*": 4
+    }
+  },
+  
+  "hyprland/window": {
+    "max-length": 60,
+    "separate-outputs": true,
+    "rewrite": {
+      "": "Desktop"
+    }
+  },
+  
+  "clock": {
+    "interval": 1,
+    "format": " {:%H:%M:%S}",
+    "format-alt": "󰃭 {:%A, %B %d, %Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    }
+  },
+  
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-full": "󱟢 {capacity}%",
+    "format-icons": ["󱃍", "󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+    "tooltip-format": "{timeTo}\n{power}W"
+  },
+  
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󱡏",
+      "headset": "󰋎",
+      "phone": "󰄜",
+      "portable": "󰦧",
+      "car": "󰄋",
+      "default": ["󰕿", "󰖀", "󰕾"]
+    },
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "scroll-step": 5,
+    "tooltip-format": "{desc}"
+  },
+  
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 5%+",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+  
+  "network": {
+    "format-wifi": "󰖨 {essid}",
+    "format-ethernet": "󰈀 Connected",
+    "format-disconnected": "󰖪 Disconnected",
+    "tooltip-format": "{ifname}: {ipaddr}/{cidr}\n󰞒 {bandwidthDownBytes}  󰞕 {bandwidthUpBytes}",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: {ipaddr}/{cidr}\n󰞒 {bandwidthDownBytes}  󰞕 {bandwidthUpBytes}",
+    "on-click": "nm-connection-editor"
+  },
+  
+  "bluetooth": {
+    "format": "󰂯",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱 {num_connections}",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+  
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": false,
+    "on-click": "exit"
+  },
+  
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  }
+}
