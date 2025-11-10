@@ -6,17 +6,35 @@
 
   "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["custom/song", "network", "bluetooth", "pulseaudio", "backlight", "battery", "custom/power", "tray"],
+  "modules-right": [
+    "custom/song",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "custom/bright",
+    "battery",
+    "custom/power",
+    "tray"
+  ],
 
-"custom/song": {
-  "format": "󰎈 {}",
-  "exec": "bash -c 'playerctl metadata --format \"{{ title }} - {{ artist }}\" 2>/dev/null || echo No music'",
-  "interval": 2,
-  "on-click": "playerctl play-pause",
-  "on-scroll-up": "playerctl next",
-  "on-scroll-down": "playerctl previous",
-  "tooltip": false
-},
+  "custom/bright": {
+    "format": "󰃠 {}",
+    "exec": "~/.config/waybar/brightness.sh",
+    "interval": 2,
+    "on-scroll-up": "~/.config/waybar/brightness.sh up",
+    "on-scroll-down": "~/.config/waybar/brightness.sh down",
+    "tooltip": false
+  },
+
+  "custom/song": {
+    "format": "󰎈 {}",
+    "exec": "bash -c 'playerctl metadata --format \"{{ title }} - {{ artist }}\" 2>/dev/null | cut -c -30 || echo No music'",
+    "interval": 2,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "tooltip": false
+  },
 
   "custom/launcher": {
     "format": "󰣇",
@@ -103,14 +121,6 @@
     "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "scroll-step": 5,
     "tooltip-format": "{desc}"
-  },
-
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
-    "on-scroll-up": "brightnessctl set 5%+",
-    "on-scroll-down": "brightnessctl set 5%-"
   },
 
   "network": {

@@ -21,7 +21,6 @@ window#waybar {
 #battery,
 #network,
 #pulseaudio,
-#backlight,
 #bluetooth,
 #tray,
 #custom-launcher,
@@ -247,3 +246,17 @@ tooltip label {
     box-shadow: 0 0 20px @color2;
   }
 }
+#custom-bright{
+  padding: 10px
+}
+
+#custom-bright{
+  background: rgba(255, 255, 255, 0.05);
+  color: @foreground;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 8px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
