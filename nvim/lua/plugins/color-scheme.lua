@@ -10,6 +10,7 @@ return {
         underline = true,
         bold = true,
         italic = {
+          emphasis = true,
           strings = true,
           comments = true,
           operators = false,
@@ -20,8 +21,8 @@ return {
         invert_signs = false,
         invert_tabline = false,
         invert_intend_guides = false,
-        inverse = true, -- invert background for search, diffs, etc.
-        contrast = "soft", -- "hard", "soft", or leave empty
+        inverse = true,
+        contrast = "soft",
         palette_overrides = {},
         overrides = {},
         transparent_mode = true,

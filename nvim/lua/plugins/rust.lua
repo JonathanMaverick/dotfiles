@@ -15,12 +15,15 @@ return {
             },
           },
         },
-        on_attach = function(client, bufnr)
+        on_attach = function(_, bufnr)
           vim.api.nvim_create_autocmd("BufWritePre", {
             buffer = bufnr,
             callback = function()
               vim.lsp.buf.code_action({
-                context = { only = { "quickfix" } },
+                context = {
+                  only = { "quickfix" },
+                  diagnostics = {},
+                },
                 apply = true,
               })
             end,
