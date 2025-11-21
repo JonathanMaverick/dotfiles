@@ -36,5 +36,3 @@ fi
 if [ -f ~/.cache/wal/colors-tty.sh ]; then
     source ~/.cache/wal/colors-tty.sh
 fi
-
-fastfetch
