@@ -3,14 +3,9 @@ return {
   opts = {
     picker = {
       ignored = true,
-      files = {
-        hidden = true,
-      },
-    },
-    explorer = {
-      ignored = true,
-      files = {
-        hidden = true,
+      hidden = true,
+      sources = {
+        explorer = { ignored = true, hidden = true },
       },
     },
   },
