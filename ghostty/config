@@ -1,9 +1,8 @@
 font-family = JetBrainsMono Nerd Font
 font-size = 15
-theme = Nord
+theme = GitLab Dark Grey 
 cursor-style = block
 
-background-image = ~/Pictures/cozywalls/cozy-trip.jpg
 background-image-opacity = 0.05
 background-image-position = center
 background-image-fit = cover

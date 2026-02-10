@@ -1,44 +1,44 @@
 return {
   {
-    "ellisonleao/gruvbox.nvim",
+    "rebelot/kanagawa.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      theme = "dragon",
+      --transparent = true,
+      background = {
+        dark = "dragon",
+      },
+      colors = {
+        theme = {
+          all = {
+            ui = {
+              bg_gutter = "none",
+              bg = "none",
+              bg_dark = "none",
+              bg_float = "none",
+            },
+          },
+        },
+      },
+    },
+  },
+  {
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
     lazy = false,
     priority = 1000,
     config = function()
-      require("gruvbox").setup({
-        terminal_colors = true,
-        undercurl = true,
-        underline = true,
-        bold = true,
-        italic = {
-          emphasis = true,
-          strings = true,
-          comments = true,
-          operators = false,
-          folds = true,
+      require("github-theme").setup({
+        options = {
+          transparent = true, -- do NOT set a background color
+          hide_end_of_buffer = true, -- hide ~ characters
+          terminal_colors = true, -- let the theme set terminal colors
         },
-        strikethrough = true,
-        invert_selection = false,
-        invert_signs = false,
-        invert_tabline = false,
-        invert_intend_guides = false,
-        inverse = true,
-        contrast = "soft",
-        palette_overrides = {},
-        overrides = {},
-        transparent_mode = true,
       })
-      vim.cmd("colorscheme gruvbox")
 
-      vim.cmd([[
-        hi Normal guibg=NONE ctermbg=NONE
-        hi NormalNC guibg=NONE ctermbg=NONE
-        hi LineNr guibg=NONE
-        hi Folded guibg=NONE
-        hi SignColumn guibg=NONE
-        hi VertSplit guibg=NONE
-        hi StatusLine guibg=NONE
-        hi StatusLineNC guibg=NONE
-      ]])
+      -- load the style you prefer:
+      vim.cmd("colorscheme github_dark") -- or github_dark_dimmed
     end,
   },
 }
