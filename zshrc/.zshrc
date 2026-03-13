@@ -1,6 +1,7 @@
 export GOPATH="$HOME/Projects/go"
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin:$PATH"
+export DOCKER_BUILDKIT=1
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -36,3 +37,4 @@ fi
 if [ -f ~/.cache/wal/colors-tty.sh ]; then
     source ~/.cache/wal/colors-tty.sh
 fi
+unset zle_bracketed_paste
