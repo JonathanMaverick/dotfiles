@@ -1,6 +1,6 @@
 export GOPATH="$HOME/Projects/go"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin:$PATH"
 export DOCKER_BUILDKIT=1
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -14,6 +14,9 @@ alias c='clear'
 alias e='exit'
 alias fd='fdfind'
 alias lg='lazygit'
+alias vim='nvim'
+alias v='nvim'
+alias k='kubectl'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -38,3 +41,7 @@ if [ -f ~/.cache/wal/colors-tty.sh ]; then
     source ~/.cache/wal/colors-tty.sh
 fi
 unset zle_bracketed_paste
+export PATH="$HOME/.npm-global/bin:$PATH"
+
+# OpenClaw Completion
+source "/home/scrail/.openclaw/completions/openclaw.zsh"
