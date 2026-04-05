@@ -14,6 +14,9 @@ alias c='clear'
 alias e='exit'
 alias fd='fdfind'
 alias lg='lazygit'
+alias vi='nvim'
+alias v='nvim'
+alias k='kubectl'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 

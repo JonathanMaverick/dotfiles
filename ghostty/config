@@ -1,6 +1,6 @@
 font-family = JetBrainsMono Nerd Font
-font-size = 15
-theme = GitLab Dark Grey 
+font-size = 12
+theme = Github Dark High Contrast 
 cursor-style = block
 
 background-image-opacity = 0.05
