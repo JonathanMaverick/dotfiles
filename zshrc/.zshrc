@@ -1,6 +1,7 @@
 export GOPATH="$HOME/Projects/go"
 export ZSH="$HOME/.oh-my-zsh"
-export PATH="$HOME/.npm-global/bin:/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:/usr/local/go/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.dotnet:$PATH"
+export DOTNET_ROOT=$HOME/.dotnet
 export DOCKER_BUILDKIT=1
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -46,3 +47,4 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 
 # OpenClaw Completion
 source "/home/scrail/.openclaw/completions/openclaw.zsh"
+export PATH="$PATH:$HOME/.dotnet/tools"
