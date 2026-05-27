@@ -1,0 +1,12 @@
+ZSH_HIGHLIGHT_STYLES[command]=fg={color2},bold
+ZSH_HIGHLIGHT_STYLES[builtin]=fg={color2},bold
+ZSH_HIGHLIGHT_STYLES[function]=fg={color2},bold
+ZSH_HIGHLIGHT_STYLES[alias]=fg={color6},bold
+ZSH_HIGHLIGHT_STYLES[unknown-token]=fg={color1},bold
+ZSH_HIGHLIGHT_STYLES[reserved-word]=fg={color3},bold
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg={color4}
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg={color4}
+ZSH_HIGHLIGHT_STYLES[path]=fg={color5},underline
+ZSH_HIGHLIGHT_STYLES[globbing]=fg={color6}
+ZSH_HIGHLIGHT_STYLES[history-expansion]=fg={color5}
+ZSH_HIGHLIGHT_STYLES[comment]=fg={color8},italic
