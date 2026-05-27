@@ -1,8 +1,8 @@
 {
   "layer": "top",
   "position": "top",
-  "margin": "8 12 0 12",
-  "height": 40,
+  "margin": "0 0 0 0",
+  "height": 44,
 
   "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
@@ -37,7 +37,7 @@
   },
 
   "custom/launcher": {
-    "format": "󰣇",
+    "format": "󱄅",
     "tooltip": false,
     "on-click": "wofi"
   },
@@ -59,7 +59,8 @@
       "default": "󰊠"
     },
     "persistent-workspaces": {
-      "*": 4
+      "eDP-1": [1, 2, 3, 4, 5],
+      "DP-2": [6, 7, 8, 9, 10]
     }
   },
 
@@ -73,8 +74,7 @@
 
   "clock": {
     "interval": 1,
-    "format": " {:%H:%M:%S}",
-    "format-alt": "󰃭 {:%A, %B %d, %Y}",
+    "format": " {0:%H:%M:%S}   󰃭 {0:%A, %d %B %Y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode": "month",

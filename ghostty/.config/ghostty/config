@@ -1,0 +1,23 @@
+font-family = JetBrainsMono Nerd Font
+font-size = 12
+command = /bin/zsh
+cursor-style = block
+cursor-style-blink = true
+
+# Transparency
+background-opacity = 0.85
+background-blur-radius = 50
+unfocused-split-opacity = 0.85
+
+# Padding
+window-padding-x = 16
+window-padding-y = 12
+
+# Window chrome
+window-decoration = none
+
+# Scrollback
+scrollback-limit = 10000
+
+# PYWAL_COLORS_START
+# PYWAL_COLORS_END

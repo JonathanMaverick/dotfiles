@@ -1,0 +1,154 @@
+@import url("/home/scrail/.cache/wal/colors-waybar.css");
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: alpha(@background, 0.85);
+  border-radius: 14px;
+  margin: 8px 6px;
+  padding: 0 4px;
+  border: 1px solid alpha(@color8, 0.3);
+}
+
+#workspaces {
+  padding: 2px 4px;
+}
+
+#workspaces button {
+  padding: 4px 10px;
+  margin: 2px;
+  color: alpha(@foreground, 0.5);
+  background: transparent;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+  color: @color0;
+  background: @color4;
+  box-shadow: 0 0 10px alpha(@color4, 0.5);
+}
+
+#workspaces button.urgent {
+  color: @color0;
+  background: @color1;
+}
+
+#workspaces button:hover {
+  color: @foreground;
+  background: alpha(@color8, 0.3);
+}
+
+#window {
+  color: alpha(@foreground, 0.7);
+  padding: 0 12px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+#clock {
+  color: @color6;
+  padding: 0 16px;
+  font-weight: 700;
+}
+
+#battery {
+  color: @color2;
+  padding: 0 12px;
+}
+
+#battery.warning {
+  color: @color3;
+}
+
+#battery.critical {
+  color: @color1;
+  animation: blink 1s ease infinite alternate;
+}
+
+@keyframes blink {
+  to { opacity: 0.5; }
+}
+
+#network {
+  color: @color4;
+  padding: 0 12px;
+}
+
+#network.disconnected {
+  color: alpha(@foreground, 0.3);
+}
+
+#pulseaudio {
+  color: @color5;
+  padding: 0 12px;
+}
+
+#pulseaudio.muted {
+  color: alpha(@foreground, 0.3);
+}
+
+#bluetooth {
+  color: @color4;
+  padding: 0 12px;
+}
+
+#bluetooth.disabled {
+  color: alpha(@foreground, 0.3);
+}
+
+#custom-launcher {
+  color: @color2;
+  font-size: 18px;
+  padding: 0 14px;
+}
+
+#custom-power {
+  color: @color1;
+  font-size: 16px;
+  padding: 0 14px;
+}
+
+#custom-song {
+  color: @color5;
+  padding: 0 12px;
+  font-style: italic;
+}
+
+#custom-bright {
+  color: @color3;
+  padding: 0 10px;
+}
+
+#tray {
+  padding: 0 10px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+tooltip {
+  background: alpha(@background, 0.95);
+  color: @foreground;
+  border: 1px solid alpha(@color8, 0.4);
+  border-radius: 10px;
+  padding: 8px;
+}
