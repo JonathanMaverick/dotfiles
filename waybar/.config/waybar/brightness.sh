@@ -17,11 +17,13 @@ sync_external() {
 inc() {
   brightnessctl set +${STEP}% >/dev/null
   sync_external
+  pkill --signal SIGRTMIN+8 waybar
 }
 
 dec() {
   brightnessctl set ${STEP}%- >/dev/null
   sync_external
+  pkill --signal SIGRTMIN+8 waybar
 }
 
 case "$1" in

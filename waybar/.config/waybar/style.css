@@ -56,7 +56,6 @@ window#waybar {
   color: alpha(@foreground, 0.7);
   padding: 0 12px;
   font-weight: 500;
-  font-style: italic;
 }
 
 #clock {
@@ -102,35 +101,96 @@ window#waybar {
 }
 
 #bluetooth {
-  color: @color4;
+  color: alpha(@foreground, 0.4);
   padding: 0 12px;
 }
 
+#bluetooth.connected {
+  color: @color4;
+}
+
 #bluetooth.disabled {
-  color: alpha(@foreground, 0.3);
+  color: alpha(@foreground, 0.2);
+}
+
+#cpu {
+  color: @color1;
+  padding: 0 12px;
+}
+
+#cpu.warning {
+  color: @color3;
+}
+
+#cpu.critical {
+  color: @color1;
+  animation: blink 1s ease infinite alternate;
+}
+
+#memory {
+  color: @color6;
+  padding: 0 12px;
+}
+
+#memory.warning {
+  color: @color3;
+}
+
+#memory.critical {
+  color: @color1;
+  animation: blink 1s ease infinite alternate;
 }
 
 #custom-launcher {
   color: @color2;
   font-size: 18px;
   padding: 0 14px;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+
+#custom-launcher:hover {
+  color: @foreground;
+  background: alpha(@color2, 0.2);
 }
 
 #custom-power {
   color: @color1;
   font-size: 16px;
   padding: 0 14px;
+  border-radius: 14px;
+  transition: all 0.2s ease;
+}
+
+#custom-power:hover {
+  color: @foreground;
+  background: alpha(@color1, 0.2);
 }
 
 #custom-song {
   color: @color5;
   padding: 0 12px;
-  font-style: italic;
 }
 
 #custom-bright {
   color: @color3;
   padding: 0 10px;
+}
+
+#custom-theme {
+  color: @color6;
+  font-size: 16px;
+  padding: 0 10px;
+}
+
+#custom-notifications {
+  color: @color5;
+  font-size: 15px;
+  padding: 0 12px;
+}
+
+#custom-notifications.dnd {
+  color: alpha(@foreground, 0.3);
 }
 
 #tray {
